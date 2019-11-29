@@ -1,0 +1,212 @@
+{
+    "extends": [
+        "plugin:@typescript-eslint/recommended", // Uses the recommended rules from @typescript-eslint/eslint-plugin
+        "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+        "plugin:prettier/recommended" // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+    ],
+    "plugins": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": false
+        }
+    },
+    "settings": {
+        "import/resolver": {
+            "babel-module": {}
+        },
+        "react": {
+            "version": "detect"
+        }
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "mocha": true,
+        "jest": true
+    },
+    "rules": {
+        "strict": [2, "never"],
+        "no-var": 2,
+        "no-shadow": 2,
+        "no-shadow-restricted-names": 2,
+        "no-unused-vars": [
+            0,
+            {
+                "vars": "local",
+                "args": "after-used"
+            }
+        ],
+        "comma-dangle": [2, "never"],
+        "no-cond-assign": [2, "always"],
+        "no-console": [
+            1,
+            {
+                "allow": ["warn", "error"]
+            }
+        ],
+        "no-debugger": 1,
+        // "no-alert": 1,
+        "no-constant-condition": 1,
+        "no-dupe-keys": 2,
+        "no-duplicate-case": 2,
+        "no-empty": 2,
+        "no-ex-assign": 2,
+        "no-extra-boolean-cast": 0,
+        "no-extra-semi": 2,
+        "no-func-assign": 2,
+        "no-inner-declarations": 2,
+        "no-invalid-regexp": 2,
+        "no-irregular-whitespace": 2,
+        "no-obj-calls": 2,
+        "no-reserved-keys": 0,
+        "no-sparse-arrays": 2,
+        "no-unreachable": 2,
+        "use-isnan": 2,
+        "block-scoped-var": 2,
+        "consistent-return": 0,
+        "curly": [2, "multi-line"],
+        "max-len": [
+            "error",
+            {
+                "code": 180,
+                "tabWidth": 4,
+                "ignoreComments": true,
+                "ignoreTrailingComments": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true
+            }
+        ],
+        "default-case": 2,
+        "dot-notation": [
+            2,
+            {
+                "allowKeywords": true
+            }
+        ],
+        "eqeqeq": 2,
+        "guard-for-in": 2,
+        "no-caller": 2,
+        "no-eq-null": 2,
+        "no-eval": 2,
+        "no-extend-native": 2,
+        "no-extra-bind": 2,
+        "no-fallthrough": 2,
+        "no-floating-decimal": 2,
+        "no-implied-eval": 2,
+        "no-lone-blocks": 2,
+        "no-loop-func": 2,
+        "no-multi-str": 2,
+        "no-native-reassign": 2,
+        "no-new": 2,
+        "no-new-func": 2,
+        "no-new-wrappers": 2,
+        "no-octal": 2,
+        "no-octal-escape": 2,
+        "no-param-reassign": 2,
+        "no-proto": 2,
+        "no-redeclare": 2,
+        "no-return-assign": [2, "except-parens"],
+        "no-script-url": 2,
+        "no-self-compare": 2,
+        "no-sequences": 2,
+        "no-throw-literal": 2,
+        "no-with": 2,
+        "radix": [2, "as-needed"],
+        "wrap-iife": [2, "any"],
+        "yoda": 2,
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1,
+                "ignoredNodes": ["TemplateLiteral"]
+            }
+        ],
+        "brace-style": [
+            2,
+            "1tbs",
+            {
+                "allowSingleLine": true
+            }
+        ],
+        "quotes": [2, "single", "avoid-escape"],
+        "camelcase": [
+            2,
+            {
+                "properties": "never"
+            }
+        ],
+        "comma-spacing": [
+            2,
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "comma-style": [2, "last"],
+        "eol-last": 2,
+        // "func-names": 1,
+        "key-spacing": [
+            2,
+            {
+                "beforeColon": false,
+                "afterColon": true
+            }
+        ],
+        // "new-cap": [
+        //     2,
+        //     {
+        //         "newIsCap": true,
+        //         "newIsCapExceptions": [],
+        //         "capIsNew": false
+        //     }
+        // ],
+        "no-multiple-empty-lines": [
+            2,
+            {
+                "max": 2
+            }
+        ],
+        "no-nested-ternary": 2,
+        "no-new-object": 2,
+        "no-spaced-func": 2,
+        "no-trailing-spaces": 2,
+        "no-extra-parens": 0,
+        "no-underscore-dangle": 0,
+        "one-var": [2, "never"],
+        "padded-blocks": 0,
+        "semi": [2, "always"],
+        "semi-spacing": [
+            2,
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "keyword-spacing": 2,
+        "space-before-blocks": 2,
+        "space-before-function-paren": [
+            "error",
+            {
+                "anonymous": "always",
+                "named": "never",
+                "asyncArrow": "always"
+            }
+        ],
+        "react/prop-types": 0,
+        "react/forbid-prop-types": 0,
+        "react/jsx-max-props-per-line": [
+            2,
+            {
+                "maximum": 3
+            }
+        ],
+        "jsx-a11y/tabindex-no-positive": 2,
+        "import/prefer-default-export": "off",
+        "react/no-did-mount-set-state": "off"
+    }
+}
