@@ -9,6 +9,11 @@
         "clean": "rm -rf dist/*",
         "test": "./node_modules/.bin/jest --config ./jest.config.js"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm t && npm run build"
+        }
+    },
     "author": "",
     "license": "ISC",
     "devDependencies": {
