@@ -16,4 +16,8 @@ describe('emailValidator', () => {
     test('Should return false for email address with invalid ip domain', () => {
         expect(isValidEmail('a@[256.123.123.123]')).toBe(false);
     });
+
+    test('Should return false for email address with invalid email domain', () => {
+        expect(isValidEmail('apple@go_gmail.com')).toBe(false);
+    });
 });
