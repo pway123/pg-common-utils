@@ -34,7 +34,7 @@ export function isValidEmail(emailStr: string): boolean {
 
   /* The following pattern describes the validity of the domain Eg. should not include
     special character in the email domain. */
-  const newRegexToCheckDomain = /^.+@([a-zA-Z0-90-9]+(\.[a-zA-Z0-90-9]+)*?\.[a-zA-Z]{2,4}|(\d{1,3}\.){3}\d{1,3})?$/;
+  const newRegexToCheckDomain = /^.+@([a-zA-Z0-9][-a-zA-Z0-9]*(\.[-a-zA-Z0-9]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-zA-Z][a-zA-Z]))?$/;
 
   /* Finally, let's start trying to figure out if the supplied address is
        valid. */
