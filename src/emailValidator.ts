@@ -39,9 +39,11 @@ export function isValidEmail(emailStr: string): boolean {
   /* Finally, let's start trying to figure out if the supplied address is
        valid. */
 
+  const emailStrLowerCase = emailStr.toLowerCase();
+
   /* Begin with the coarse pattern to simply break up user@domain into
        different pieces that are easy to analyze. */
-  const matchArray = emailStr.match(emailPat);
+  const matchArray = emailStrLowerCase.match(emailPat);
   if (matchArray === null) {
     /* Too many/few @'s or something; basically, this address doesn't
          even fit the general mould of a valid e-mail address. */
@@ -79,7 +81,7 @@ export function isValidEmail(emailStr: string): boolean {
     return false;
   }
 
-  const regexMatch = emailStr.match(newRegexToCheckDomain);
+  const regexMatch = emailStrLowerCase.match(newRegexToCheckDomain);
   if (regexMatch == null) {
     return false;
   }

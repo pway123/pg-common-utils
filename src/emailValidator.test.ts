@@ -21,6 +21,7 @@ describe('emailValidator', () => {
       'test@[123.123.123.123]',
       'first.last@123.iana.org',
       'test@xn--example.com',
+      'test@xn--example.COM',
       'test@isce2.astar.edu.sg',
       'test@example.example.iana.org',
       '1234567890123456789012345678901234567890123456789012345678901234@iana.org'
